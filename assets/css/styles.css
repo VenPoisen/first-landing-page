@@ -1,7 +1,8 @@
 :root {
     --primary-color: #08223C;
     --white-color: #fff;
-    --gap: 3rem
+    --light-gray-color: rgb(226, 225, 225);
+    --gap: 3rem;
 }
 
 * {
@@ -12,6 +13,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -54,6 +56,60 @@ h6 {
     font-size: 3.5rem;
 }
 
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #fff;
+    border-bottom: 1.5px solid var(--light-gray-color);
+}
+
+.menu div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+}
+
+.menu nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 2rem;
+    height: 6rem;
+    position: relative;
+}
+
+.menu nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: crimson;
+    transition: all 300ms ease-in-out;
+}
+
+.menu nav a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
 .main-bg {
     background-color: var(--primary-color);
     background-image: url('../img/world-map.svg');
@@ -71,6 +127,7 @@ h6 {
 
 .section {
     min-height: 100vh;
+    padding-top: 3rem;
 }
 
 .white-bg {
