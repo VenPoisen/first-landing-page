@@ -21,10 +21,7 @@
 }
 
 .sec-one-text h2 {
-    font-weight: 700;
-    font-size: 5rem;
     text-align: center;
-    text-transform: uppercase;
     /* word-break: break-all; */
     height: auto;
 }
@@ -41,8 +38,122 @@
     height: auto;
 }
 
-@media (max-width: 1080px) {
+.sec-two {
+    display: grid;
+    align-content: center;
+}
+
+.sec-two-content {
+    text-align: center;
+}
+
+.sec-two h2 {
+    padding-bottom: var(--padding-bottom);
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.sec-two-text {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.sec-two-text p {
+    line-height: 2.2;
+}
+
+.sec-three {
+    background-image: url('../img/hexagon.svg');
+    background-size: cover;
+    display: grid;
+    align-content: center;
+}
+
+.sec-three-text {
+    max-width: 65rem;
+}
+
+.sec-three-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    text-align: justify;
+    counter-reset: grid-counter;
+}
+
+.sec-three-grid h3 {
+    position: relative;
+    padding-left: 5rem;
+}
+
+.sec-three-grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 900;
+    top: -3rem;
+    left: -1rem;
+    font-style: italic;
+    transform: rotate(5deg);
+}
+
+.sec-three-grid a {
+    color: var(--white-color);
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.sec-three-grid a::after {
+    content: "";
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+    opacity: 0;
+    background: var(--secondary-color);
+    transition: all 300ms ease-in-out;
+}
+
+.sec-three-grid a:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 754px) {
+    .sec-one-content {
+        grid-template-columns: 1fr;
+        word-break: break-all;
+    }
+
+    .sec-one-img {
+        display: none;
+    }
+
+    .sec-three-text h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sec-three-grid {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        padding: 0 8rem;
+    }
+}
+
+@media (min-width: 755px) and (max-width: 1080px) {
     .sec-one {
         background-position: center center;
+    }
+
+    .sec-three-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .sec-three-grid article:nth-child(3) {
+        grid-column: span 2;
+        padding: 0 10rem;
     }
 }

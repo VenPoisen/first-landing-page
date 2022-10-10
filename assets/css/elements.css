@@ -4,6 +4,7 @@
     --white-color: #fff;
     --light-gray-color: rgb(226, 225, 225);
     --gap: 3rem;
+    --padding-bottom: 5rem;
 }
 
 * {
@@ -38,11 +39,14 @@ h1 {
 }
 
 h2 {
+    font-weight: 700;
     font-size: 5.5rem;
+    text-transform: uppercase;
+    padding-bottom: var(--gap);
 }
 
 h3 {
-    font-size: 5rem;
+    font-size: 4.8rem;
 }
 
 h4 {
@@ -61,6 +65,12 @@ a {
     text-decoration: none;
 }
 
+p {
+    padding-bottom: var(--gap);
+    line-height: 1.6;
+    font-size: 1.8rem;
+}
+
 .section {
     min-height: 100vh;
     padding-top: var(--gap);
@@ -73,6 +83,7 @@ a {
 
 .white-bg {
     background-color: var(--white-color);
+    color: var(--primary-color);
 }
 
 .main-content {
