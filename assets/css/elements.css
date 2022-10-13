@@ -71,6 +71,35 @@ p {
     font-size: 1.8rem;
 }
 
+table {
+    width: 60rem;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 2rem;
+}
+
+table caption {
+    text-align: left;
+    font-style: italic;
+    font-size: 1.4rem;
+}
+
+table td,
+table th {
+    border: 0.1rem solid var(--light-gray-color);
+    padding: 1rem;
+}
+
+table th {
+    background: var(--light-gray-color);
+}
+
+tfoot td {
+    background: var(--light-gray-color);
+    text-align: end;
+    text-transform: uppercase;
+}
+
 .section {
     min-height: 100vh;
     padding-top: var(--gap);
@@ -90,4 +119,8 @@ p {
     max-width: 120rem;
     margin: 0 auto;
     padding: var(--gap);
+}
+
+.sec-text {
+    max-width: 65rem;
 }

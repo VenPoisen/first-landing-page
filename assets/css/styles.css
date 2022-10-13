@@ -69,10 +69,6 @@
     align-content: center;
 }
 
-.sec-three-text {
-    max-width: 65rem;
-}
-
 .sec-three-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -118,6 +114,34 @@
 
 .sec-three-grid a:hover::after {
     opacity: 1;
+}
+
+.sec-four-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--gap);
+}
+
+.sec-four-grid div {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.sec-four-grid img {
+    transition: all 300ms ease-in-out;
+}
+
+.sec-four-grid img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.sec-five-table {
+    max-width: 60rem;
+    overflow-x: auto;
+    margin: 0 auto;
 }
 
 @media (max-width: 754px) {
