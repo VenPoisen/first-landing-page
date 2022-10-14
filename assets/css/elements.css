@@ -63,6 +63,7 @@ h6 {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 p {
@@ -72,9 +73,8 @@ p {
 }
 
 table {
-    width: 60rem;
+    width: 80rem;
     border-collapse: collapse;
-    text-align: center;
     font-size: 2rem;
 }
 
@@ -82,12 +82,14 @@ table caption {
     text-align: left;
     font-style: italic;
     font-size: 1.4rem;
+    margin-bottom: 0.5rem;
 }
 
 table td,
 table th {
     border: 0.1rem solid var(--light-gray-color);
     padding: 1rem;
+    text-align: left;
 }
 
 table th {
@@ -96,7 +98,7 @@ table th {
 
 tfoot td {
     background: var(--light-gray-color);
-    text-align: end;
+    text-align: right;
     text-transform: uppercase;
 }
 
