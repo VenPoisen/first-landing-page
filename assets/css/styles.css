@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
 }
 
-.sec-one-content {
+.sec-content-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
@@ -20,38 +20,37 @@
     justify-content: center;
 }
 
+.sec-img {
+    max-width: 52rem;
+}
+
 .sec-text h2 {
     text-align: center;
-    /* word-break: break-all; */
-    height: auto;
 }
 
 .sec-text p {
     text-align: justify;
-    height: auto;
 }
 
-.sec-two {
+.intro {
     display: grid;
     align-content: center;
-}
-
-.sec-two-content {
     text-align: center;
+
 }
 
-.sec-two h2 {
+.intro h2 {
     padding-bottom: var(--padding-bottom);
     max-width: 100rem;
     margin: 0 auto;
 }
 
-.sec-two-text {
+.intro-text {
     max-width: 70rem;
     margin: 0 auto;
 }
 
-.sec-two-text p {
+.intro-text p {
     line-height: 2.2;
 }
 
@@ -109,61 +108,54 @@
     opacity: 1;
 }
 
-.sec-four-grid {
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: var(--gap);
 }
 
-.sec-four-grid div {
+.gallery-grid div {
     width: 100%;
     max-width: 36rem;
     max-height: 36rem;
     overflow: hidden;
 }
 
-.sec-four-grid img {
+.gallery-grid img {
     transition: all 300ms ease-in-out;
 }
 
-.sec-four-grid img:hover {
+.gallery-grid img:hover {
     transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
 
-.sec-five {
+.pricing {
     display: flex;
     align-items: center;
 }
 
-.sec-five-content {
+.pricing-content {
     display: block;
     max-width: 100%;
 }
 
-.sec-five-text {
+.pricing-text {
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
 }
 
-.sec-five-table {
+.pricing-table {
     max-width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
-.sec-six-content {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: var(--gap);
-    min-height: 100vh;
-}
-
-.sec-six-form {
+.contact-form {
     grid-column: span 2;
 }
 
-.sec-six-form .form-grid {
+.contact-form .form-grid {
     border: none;
     display: flex;
     flex-direction: row;
@@ -267,25 +259,24 @@
     }
 
     .menu {
-        display: none;
+        bottom: 0;
     }
 
-    .sec-one-content,
-    .sec-six-content {
+    .menu div {
+        height: 100vh;
+    }
+
+    .menu div,
+    .menu div ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sec-content-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        word-break: break-all;
-        align-items: center;
+        align-content: center;
         gap: 0;
-    }
-
-    .sec-img {
-        max-width: 52rem;
-    }
-
-    .sec-three-text h2 {
-        width: 100%;
-        text-align: center;
     }
 
     .sec-three-grid {
@@ -293,9 +284,13 @@
         grid-template-rows: auto;
     }
 
-    .sec-four-grid {
+    .gallery-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+    }
+
+    .contact-form {
+        grid-column: 1;
     }
 }
 
@@ -330,25 +325,49 @@
     }
 
     .menu {
+        bottom: 0;
         display: none;
     }
 
-    .sec-one-content,
-    .sec-six-content {
+    .menu div {
+        height: 100vh;
+    }
+
+    .menu div,
+    .menu div ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .close-menu {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.3rem;
+        cursor: pointer;
+    }
+
+    .sec-content-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        word-break: break-all;
-        align-items: center;
+        align-content: center;
         gap: 0;
-    }
-
-    .sec-img {
-        max-width: 52rem;
-    }
-
-    .sec-three-text h2 {
-        width: 100%;
-        text-align: center;
     }
 
     .sec-three-grid {
@@ -357,9 +376,13 @@
         padding: 0 8rem;
     }
 
-    .sec-four-grid {
+    .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
+    }
+
+    .contact-form {
+        grid-column: 1;
     }
 
 }
