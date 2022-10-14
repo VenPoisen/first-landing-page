@@ -17,9 +17,9 @@
     <label class="close-menu-label" for="close-menu" tittle="close menu"></label>
     <aside class="menu">
         <div>
-            <h1><a href="#logo"> LOGO</a></h1>
+            <h1 onclick="getElementById('close-menu').checked = false;"><a href="#logo"> LOGO</a></h1>
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#top-three">Top 3</a></li>
                     <li><a href="#gallery">Gallery</a></li>
@@ -208,6 +208,8 @@
     </section>
     <footer id="footer" class="white-bg "><a href=""> Feito com <span class="heart">♥</span> por Alan Martins</a>
     </footer>
+
+    <a class="back-to-top" href="#home"></a>
 </body>
 
 </html>
