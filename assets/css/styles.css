@@ -232,6 +232,21 @@
     display: none;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0.1rem solid var(--white-color);
+}
+
 @media (max-width: 534px) {
     h2 {
         font-size: 7vw;
